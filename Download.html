@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download SecureVS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .download-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .fake-download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .fake-download-button:hover {
+            background-color: #0056b3;
+        }
+
+        .download-progress {
+            margin-top: 30px;
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SecureVS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="download.html">Download Here!</a></li>
+                    <li><a href="index.html#support">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container download-section">
+            <h2>Download SecureVS</h2>
+            <p>Click the button below to start the download of SecureVS v1.0.0.</p>
+            <a href="Download.html" class="fake-download-button" id="startDownload">Download Now</a>
+            <p id="downloadStatus" class="download-progress"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SecureVS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButton = document.getElementById('startDownload');
+            const downloadStatus = document.getElementById('downloadStatus');
+
+            downloadButton.addEventListener('click', function(event) {
+                event.preventDefault(); 
+
+                downloadStatus.textContent = "Download starting...";
+
+              
+                setTimeout(function() {
+                    downloadStatus.textContent = "Downloading... (10%)";
+                    setTimeout(function() {
+                        downloadStatus.textContent = "Downloading... (50%)";
+                        setTimeout(function() {
+                            downloadStatus.textContent = "Download complete! Thank you for using SecureVS.";
+                    
+                        }, 2000); 
+                    }, 3000); 
+                }, 1500); 
+            });
+        });
+    </script>
+</body>
+</html>
