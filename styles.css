@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffffce;
     color: #333;
     line-height: 1.6;
 }
@@ -58,7 +58,7 @@ main section:last-child {
 }
 
 main h2, main h3 {
-    color: #333;
+    color: #5eff00;
     margin-bottom: 15px;
 }
 
